@@ -1,19 +1,69 @@
 
-let list = [
-  { title: "Rad Red"},
-  { title: "Lawn"},
-  { title: "Party Pink"}
-]
+// Every seconds
+setInterval(logClockTime, 1000);
 
-// var addColor = function(title, colors ){
-//   colors.push({title: title})
-//   return colors;
-// }
+function logClockTime () {
+  let time = getClockTime();
 
-const addColor = (title, array) => array.concat({title})
+  console.clear();
+  console.log(time);
+}
 
-console.log(addColor("Glam Green", list).length);
-console.log(list);
+function getClockTime(){
+  //Current time
+  var date = new Date();
+  var time = '';
+
+  var time = {
+    hours: date.getHours(),
+    minutes: date.getMinutes(),
+    seconds: date.getSeconds(),
+    ampm: "AM"
+  }
+
+  if(time.hours == 12) {
+    time.ampm = "PM";
+  } else if(time.hours > 12) {
+    time.ampm = "PM";
+    time.hours -= 12;
+  }
+  if(time.hours < 10) {
+    time.hours = "0" + time.hours;
+  }
+
+  if(time.minutes< 10) {
+    time.minutes = '0' + time.minutes;
+  }
+
+  if(time.seconds<10) {
+    time.seconds = '0' + time.seconds;
+  }
+  return time.hours+":"
+  + time.minutes + ':'
+  + time.seconds + ':'
+  + time.ampm;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
