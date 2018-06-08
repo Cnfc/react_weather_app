@@ -1,10 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Greeter = require('Greeter');
 
-var firstName = 'Jann'
 
 ReactDOM.render(
-  <Greeter name = {firstName}/>,
+  <h1>Bilerplate</h1>,
   document.getElementById('app')
 );
