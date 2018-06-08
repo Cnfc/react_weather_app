@@ -2,12 +2,21 @@
 var React = require('react');
 
 var WeatherForm = React.createClass({
+  onFormSubmit: function(e){
+    e.preventDefault();
+
+    var location = this.refs.location.value;
+
+    if(location.length>0) {
+      this.refs.location.value='';
+      this.props.onSearch(location);
+    }
+  },
   render: function(){
     return(
       <div>
-        <form>
-          <h1>Get Weather</h1>
-          <input type="text" placeholder="Enter city name"></input>
+        <form onSubmit={this.onFormSubmit}>
+          <input type="text" ref="location" placeholder="Enter city name"></input>
           <button>Get Weather</button>
         </form>
       </div>
