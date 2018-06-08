@@ -10,6 +10,7 @@ var Main = React.createClass({
         <h2>Main Component</h2>
         {this.props.children}
 
+
       </div>
 
     );
