@@ -25230,7 +25230,7 @@
 	      React.createElement(
 	        'h5',
 	        null,
-	        message
+	        'City not found'
 	      ),
 	      React.createElement(
 	        'p',
