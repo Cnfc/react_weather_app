@@ -21,9 +21,6 @@ ReactDOM.render(
       <Route path="about" component={About}/>
       <Route path="Examples" component={Examples}/>
       <IndexRoute component={Weather}/>
-
-
-
     </Route>
   </Router>,
   document.getElementById('app')

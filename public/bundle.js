@@ -25230,11 +25230,6 @@
 	      React.createElement(
 	        'h5',
 	        null,
-	        message
-	      ),
-	      React.createElement(
-	        'h5',
-	        null,
 	        'City not found...'
 	      ),
 	      React.createElement(
